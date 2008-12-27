@@ -1,6 +1,6 @@
 require 'capistrano/version'
 require 'rubygems'
-require 'capinatra'
+#require 'capinatra'
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 
 default_run_options[:pty] = true
