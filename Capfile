@@ -22,7 +22,7 @@ set :deploy_via, :remote_cache
 set :apache_vhost_dir, "/etc/apache2/sites-enabled"
 
 # scm settings
-set :repository, "git@github.com:papricek/zlatenka.git"
+set :repository, "git@github.com:papricek/cms_on_sinatra.git"
 set :scm, "git"
 set :scm_passphrase, ""
 set :scm_verbose, true
