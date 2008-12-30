@@ -42,7 +42,8 @@ after "deploy:cold" do
 end
 
 after :deploy do
-  run "cd #{current_path}; rake app:install:create_links"
+  app.install.create_links
+  #run "cd #{current_path}; rake app:install:create_links"
 end
 
 
