@@ -49,8 +49,6 @@ end
 namespace :app do
   namespace :install do
 
-    require 'config/deploy'
-
     task :create_data_directory do
       puts "Creating data directory in " + data_directory
       FileUtils.mkdir_p( data_directory )
