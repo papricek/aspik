@@ -1,1 +1,1 @@
-require 'config/deploy'
+load 'config/deploy.rb'
