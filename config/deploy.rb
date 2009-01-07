@@ -61,7 +61,7 @@ namespace :app do
 
     task :create_database do
       puts "Creating database in #{data_directory}/database.db"
-      load( File.join( File.dirname(__FILE__), 'config', 'migrations.rb' ) )
+      load( File.join( File.dirname(__FILE__), 'migrations.rb' ) )
     end
   end
 end
