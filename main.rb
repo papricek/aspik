@@ -3,18 +3,13 @@
   require lib
 end
 
-#Require files
-%w(models).each do |file|
-  require file
+#Require CMS files
+%w(models configuration).each do |file|
+  require "app/#{file}"
 end
 
 get '/' do
-  'Hello world!'
-end
-
-configure  do
-  ActiveRecord::Base.configurations = YAML::load(ERB.new(IO.read(File.join(File.dirname(__FILE__), 'config', 'database.yml'))).result)
-  ActiveRecord::Base.establish_connection( :adapter => 'sqlite3', :database => File.join(DATA_DIRECTORY, 'comments.db') )
+  'Hello worlfffd!'
 end
 
 configure :production do

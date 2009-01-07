@@ -1,0 +1,9 @@
+site:
+  title: "Sémantický web"
+  name:  "Sémantický web"
+  author: "Patrik Jíra"
+  email:  "patrikjira@gmail.com"
+
+ga_code: ""
+
+data_directory: "../data"
