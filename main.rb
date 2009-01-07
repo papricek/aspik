@@ -3,13 +3,13 @@
   require lib
 end
 
-#Require CMS files
-%w(models configuration).each do |file|
-  require "app/#{file}"
+#Require Aspik files
+Dir["app/*.rb"].each do |lib|
+  require lib
 end
 
 get '/' do
-  'Hello worlfffd!'
+  Aspik::Configuration::CONFIG['site']['title']
 end
 
 configure :production do

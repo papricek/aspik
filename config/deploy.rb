@@ -32,20 +32,16 @@ set :branch, "master"
 #set :git_enable_submodules, 1
 
 
-
 namespace :deploy do
   task :restart do
     run "touch #{current_path}/tmp/restart.txt"
   end
 end
 
-after "deploy:cold" do
-  run "cd #{current_path}; rake app:install:create_data_directory; rake app:install:create_database;"
-end
-
 after :deploy do
   app.install.create_links
-  #run "cd #{current_path}; rake app:install:create_links"
+  app.install.create_data_directory
+  app.install.create_database
 end
 
 
@@ -58,17 +54,13 @@ namespace :app do
     end
 
     task :create_links do
+      puts "Creating links to /config/database.yml and /data"
       run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml "
-      run "ln -nfs #{deploy_to}/shared/data/database.db #{release_path}/config/database.db "
+      run "ln -nfs #{deploy_to}/shared/data/ #{release_path}/data"
     end
-
-
 
     task :create_database do
       puts "Creating database in #{data_directory}/database.db"
-      ActiveRecord::Base.establish_connection( :adapter => 'sqlite3',
-        :database => File.join(data_directory, 'database.db')
-      )
       load( File.join( File.dirname(__FILE__), 'config', 'migrations.rb' ) )
     end
   end
