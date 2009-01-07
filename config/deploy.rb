@@ -24,7 +24,7 @@ set :apache_vhost_dir, "/etc/apache2/sites-enabled"
 set :data_directory, "var/www/papricek/#{application}/shared/data"
 
 # scm settings
-set :repository, "git@github.com:papricek/cms_on_sinatra.git"
+set :repository, "git@github.com:papricek/aspik.git"
 set :scm, "git"
 set :scm_passphrase, ""
 set :scm_verbose, true
