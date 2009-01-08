@@ -41,7 +41,7 @@ end
 after :deploy do
   app.install.create_data_directory
   app.install.create_links
-  app.install.create_database
+  #app.install.create_database
 end
 
 
