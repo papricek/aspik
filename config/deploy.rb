@@ -21,7 +21,7 @@ set :use_sudo, false
 set :deploy_to, "/var/www/papricek/#{application}"
 #set :deploy_via, :remote_cache
 set :apache_vhost_dir, "/etc/apache2/sites-enabled"
-set :data_directory, "var/www/papricek/#{application}/shared/data"
+set :data_directory, "/var/www/papricek/#{application}/shared/data"
 
 # scm settings
 set :repository, "git@github.com:papricek/aspik.git"
