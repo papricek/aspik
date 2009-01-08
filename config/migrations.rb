@@ -19,6 +19,5 @@ begin
 
   end
   puts "Migration finished"
-rescue
-  puts "For some reason, migration didn't work well."
+
 end

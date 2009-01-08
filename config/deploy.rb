@@ -55,7 +55,9 @@ namespace :app do
 
     task :create_links do
       puts "Creating links to /config/database.yml and /data"
+      puts "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml "
       run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml "
+      puts "ln -nfs #{deploy_to}/shared/data/ #{release_path}/data"
       run "ln -nfs #{deploy_to}/shared/data/ #{release_path}/data"
     end
 
