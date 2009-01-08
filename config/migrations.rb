@@ -1,6 +1,6 @@
 require 'activerecord'
 require 'erb'
-require '/../app/configuration.rb'
+load(File.join( File.dirname(__FILE__), '..', 'app', 'configuration.rb' ))
 
 begin
   ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => "#{Aspik::Configuration::DATA_DIRECTORY}/database.db")
