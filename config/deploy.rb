@@ -50,8 +50,7 @@ namespace :app do
 
     task :create_data_directory do
       puts "Creating data directory in " + data_directory
-      FileUtils.mkdir_p( data_directory )
-      #run "mkdir #{data_directory}"
+      run "mkdir -p #{data_directory}"
     end
 
     task :create_links do
