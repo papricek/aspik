@@ -19,7 +19,7 @@ role :db,  domain, :primary => true
 set :user, "papricek"
 set :use_sudo, false
 set :deploy_to, "/var/www/papricek/#{application}"
-#set :deploy_via, :remote_cache
+set :deploy_via, :remote_cache
 set :apache_vhost_dir, "/etc/apache2/sites-enabled"
 set :data_directory, "/var/www/papricek/#{application}/shared/data"
 
@@ -55,9 +55,7 @@ namespace :app do
 
     task :create_links do
       puts "Creating links to /config/database.yml and /data"
-      puts "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml "
       run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml "
-      puts "ln -nfs #{deploy_to}/shared/data/ #{release_path}/data"
       run "ln -nfs #{deploy_to}/shared/data/ #{release_path}/data"
     end
 
