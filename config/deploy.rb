@@ -60,8 +60,9 @@ namespace :app do
     end
 
     task :create_database do
-      puts "Creating database in #{data_directory}/database.db"
-      load( File.join( File.dirname(__FILE__), 'migrations.rb' ) )
+      run "rake migrate_database"
     end
+
+    
   end
 end
