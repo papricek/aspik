@@ -3,7 +3,7 @@ require 'erb'
 load(File.join( File.dirname(__FILE__), '..', 'app', 'configuration.rb' ))
 
 begin
-  ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => "/var/www/papricek/semantickyweb.cz/shared/data/database.db")
+  ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => "../data/database.db")
   ActiveRecord::Schema.define(:version => 1) do
     create_table :articles do |t|
       t.string :title
