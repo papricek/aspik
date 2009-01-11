@@ -60,7 +60,7 @@ namespace :app do
     end
 
     task :create_database do
-      run "rake migrate_database"
+      run "cd #{release_path}; rake migrate_database"
     end
 
     
