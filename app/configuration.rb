@@ -10,7 +10,8 @@ module Aspik
   class Utils
 
     def self.connect_to_database
-      path = File.join( File.dirname(__FILE__), '..', 'data', 'database.rb' )
+      #path = File.join( File.dirname(__FILE__), '..', 'data', 'database.rb' )
+      path = "/var/www/papricek/semantickyweb.cz/shared/data/database.db"
       ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => path)
     end
   end
