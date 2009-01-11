@@ -8,8 +8,10 @@ Dir["app/*.rb"].each do |lib|
   require lib
 end
 
+Aspik::Utils.connect_to_database
+
 get '/' do
-  Aspik::Configuration::CONFIG['site']['title']
+  "This is testing text rendered by Aspik engine"
 end
 
 configure :production do
