@@ -4,8 +4,6 @@ require 'yaml'
 #require 'capinatra'
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 
-CONFIG = YAML.load_file( File.join(File.dirname(__FILE__), 'config.yml') ) unless defined? CONFIG
-
 # app settings
 set :app_file, "main.rb"
 set :application, "semantickyweb.cz"

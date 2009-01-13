@@ -4,23 +4,27 @@ require File.join(File.dirname(__FILE__), 'app', 'configuration')
 
 
 task :migrate_database do
-  puts "Creating database in #{Aspik::Configuration::DATA_DIRECTORY}/database.db"
+  puts "Creating/Connecting and migrating database in #{Aspik::Configuration::DATA_DIRECTORY}/database.db"
   Aspik::Utils.connect_to_database
-  begin
-    ActiveRecord::Schema.define(:version => 1) do
-      create_table :articles do |t|
-        t.string :title
-        t.text :text
-        t.timestamps
-      end
+  if ActiveRecord::Migrator.current_version < 1
+    begin
+      ActiveRecord::Schema.define(:version => 1) do
+        create_table :articles do |t|
+          t.string :title
+          t.text :text
+          t.timestamps
+        end
 
-      create_table :comments do |t|
-        t.string :title
-        t.text :text
-        t.timestamps
-      end
+        create_table :comments do |t|
+          t.string :title
+          t.text :text
+          t.timestamps
+        end
 
+      end
+      puts "Migration finished"
+    rescue
+      puts "Migration wasn't successfull"
     end
-    puts "Migration finished"
   end
 end
