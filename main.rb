@@ -1,18 +1,17 @@
-#Require libraries
 %w(rubygems sinatra activerecord erb yaml).each do |lib|
   require lib
 end
 
-#Require Aspik files
 Dir["app/*.rb"].each do |lib|
   require lib
 end
 
-Aspik::System.connect_to_database
-
-#TODO dodelat dalsi metody
 get '/' do
   "development: #{development?}, production: #{production?}"
+end
+
+configure do
+  Aspik::System.connect_to_database
 end
 
 configure :production do
