@@ -1,19 +1,13 @@
 module Aspik
   module Configuration
-
     CONFIG = YAML::load(ERB.new(IO.read(File.join(File.dirname(__FILE__), '..', 'config', 'config.yml'))).result)
-    DATABASE = YAML::load(ERB.new(IO.read(File.join(File.dirname(__FILE__), '..', 'config', 'database.yml'))).result)
-    DATA_DIRECTORY = CONFIG['data_directory']
-
+    DB = YAML::load(ERB.new(IO.read(File.join(File.dirname(__FILE__), '..', 'config', 'database.yml'))).result)
+    DATA_DIRECTORY = CONFIG['data_directory'] 
   end
 
-  class Utils
-
+  class System
     def self.connect_to_database
-      path = File.join(File.dirname(__FILE__), Aspik::Configuration::DATA_DIRECTORY, "database.db")
-      puts path
-      ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => path)
+      ActiveRecord::Base.establish_connection(Aspik::Configuration::DB['development'])
     end
   end
-
 end
