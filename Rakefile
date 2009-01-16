@@ -1,5 +1,6 @@
 require 'active_record'
 require 'erb'
+require 'sinatra'
 require File.join(File.dirname(__FILE__), 'app', 'configuration')
 
 
