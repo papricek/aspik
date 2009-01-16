@@ -7,7 +7,7 @@ module Aspik
 
   class System
     def self.connect_to_database
-      ActiveRecord::Base.establish_connection(Aspik::Configuration::DB['development'])
+      ActiveRecord::Base.establish_connection(Aspik::Configuration::DB[Sinatra.env])
     end
   end
 end
