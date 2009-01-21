@@ -14,7 +14,7 @@ ul {font-size:0.85em;margin-left:0px;}
 address {font-style:normal;margin:5px 10px 10px 0px;}
 input {color:#6F705E;vertical-align:middle;border:1px white solid;margin:0;}
 
-/* Zakladni oddily */
+/* Main sections */
 #all {text-align:left;line-height:1;background:url(../images//logo.gif) no-repeat 0px 0px;margin:auto;width:780px;position:relative;;padding-top:180px;}
 #navigation {position:absolute; top:240px;right:40px;z-index:1;}
 #content {line-height:1.5;background:url(../images//obsah-stred.gif) repeat-y;padding-left:10px;}
