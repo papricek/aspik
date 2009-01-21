@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs" />
+    <meta name="description" content="Sémantický web" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Patrik Jíra" />
+    <meta name="copyright" content="Patrik Jíra" />
+    <title><%= @page_title %></title>
+    <link href="/stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/stylesheets/print.css" rel="stylesheet" type="text/css" media="print"/>
+  </head>
+
+
+  <body>
+
+    <div id="all">
+
+      <div id="content">
+        <%= yield %>
+
+      </div>
+
+      <h2 class="navigation">navigace</h2>
+      <ul id="navigation">
+        <li><a href="">žádné odkazy</a></li>
+        <li><a href="">zatím nemáme&hellip;</a></li>
+      </ul>
+
+      <div class="box" id="inquiry">
+        <h2>boxík</h2>
+        <h3>Je prázdný, protože:</h3>
+        <p><a href="">Nemáte povoleny cookies</a></p>
+        <p><a href="">Nemáte povolen javascript</a></p>
+        <p><a href="">Zatím nikdo boxík nevložil :-)</a></p>
+        <span class="bottom"></span>
+      </div>
+
+      <form action="http://www.google.com/search" method="get"  id="search" >
+        <label for="search_keywords">vyhledávání</label><br />
+        <input type="hidden" name="hl" value="cs" />
+        <input type="hidden" name="inlang" value="cs" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="hidden" name="filter" value="0" />
+        <input type="hidden" name="as_sitesearch" value="semantickyweb.cz" />
+        <input type="text" name="as_q" id="search_keywords"   accesskey="4" />
+        <input name="commit" class="button" type="submit"  value="ok" />
+      </form>
+
+
+      <div id="footer">
+        <p><a href="http://www.napadite.net" title="Webdesignové studio Napadite.net">
+          Webdesignové studio Napadite.net,</a> <a href="mailto:papricek@seznam.cz">Patrik Jíra - webmaster,</a>
+        <a href="mailto:vercap@gmail.com">Veronika Pešková - grafika</a></p>
+        <a href="http://semantickyweb.cz" id="logo"></a>
+      </div>
+    </div>
+
+
+</body></html>

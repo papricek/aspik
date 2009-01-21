@@ -1,0 +1,68 @@
+html, body {background:white url(../images//podklad.gif); 
+        color:#41423C; text-decoration: none; text-align:center; font-style:normal; font-family: Palatino, 'palatino linotype', serif;}
+
+h1 {font-size: 1.3em;margin:0;}
+h2 {font-size:1em;}
+h3 {font-size:0.8em; margin:5px 10px 0px 0px;}
+h4 {font-size:0.8em; margin:0px 10px 0px 0px;}
+p  {font-size:0.75em; text-align:justify;}
+h1, h2 {font-family: Georgia, 'New York CE', utopia, serif;	padding-top:20px;}
+a {color:#757F8C;}
+a:hover {color:#A48C7B;}
+hr {color:black;border-color:black;clear:left;}
+ul {font-size:0.85em;margin-left:0px;}
+address {font-style:normal;margin:5px 10px 10px 0px;}
+input {color:#6F705E;vertical-align:middle;border:1px white solid;margin:0;}
+
+/* Zakladni oddily */
+#all {text-align:left;line-height:1;background:url(../images//logo.gif) no-repeat 0px 0px;margin:auto;width:780px;position:relative;;padding-top:180px;}
+#navigation {position:absolute; top:240px;right:40px;z-index:1;}
+#content {line-height:1.5;background:url(../images//obsah-stred.gif) repeat-y;padding-left:10px;}
+#search {position:absolute;top:180px;left:610px;width:130px;}
+#footer {color:black;width:760px;height:32px;padding-top:30px;background:url(../images//obsah-spodni.gif) no-repeat;}
+
+#inquiry {position:absolute; top:340px;right:35px;}
+
+/* Obsahova cast*/
+#content h1, #content h2, #content h3, #content p, #content ul {margin-left:100px;margin-right: 220px;}
+#content ul {font-size:0.75em;}
+.articleshort p, .articleshort h2 {width:100%}
+
+/* Navigation */
+#navigation a {color:white;font-weight:bolder;text-decoration:none;font-size:0.8em;text-align:center;line-height:28px;
+        background:url(../images//tlacitko.gif) no-repeat top left;width:130px;height:28px;padding:0;margin:0;display:block;cursor:pointer;_cursor:hand;}
+#navigation  a:hover {text-decoration:underline;background-position:0px -28px;}
+#navigation ul{font-size:1em;list-style-position:outside;padding:0;}
+#navigation li {list-style-type:none;margin-bottom:2px;margin:0;padding:0;}
+.navigation {color:#4D3625;font-size:0.9em;font-weight:bold;position:absolute;top:225px;left:610px;width:130px;}
+
+/* Box */
+.box {background:url(../images//box-stred.gif);z-index:1;overflow:hidden;width:145px;padding:0;margin:0;}
+.box h2 {color:#4D3625;font-size:0.9em;font-weight:bold;
+        background:url(../images//box-horni.gif) no-repeat 0 0px;display:block;margin:0;padding:7px 0 5px 13px;height:20px;}
+.box h3 {color:#4D3625;margin:0 0 10px 0;padding:0 20px;}
+.box p {color:#4D3625;text-align:left;margin:0 0 5px 0;padding: 0 20px;}
+.box .bottom {background:url(../images//box-spodni.gif) no-repeat;display:block;overflow:hidden;width:145px;clear:both;height:10px;margin:0;padding:0;}
+
+/* Footer */
+#footer p { text-align:center;padding: 10px 0px;}
+#footer img, #footer a, #footer a:hover {border:0px;}
+#footer a {color:#5F6842;font-size:0.7em;}
+#footer a:hover {color:#A48C7B;}
+
+/* Search */
+#search label {color:#4D3625;font-size:0.9em;font-weight:bold}
+#search input {width:80px;float:left;margin-top:4px;;}
+#search .button {vertical-align:top;line-height:28px;background:url(../images//hledej.gif) no-repeat;margin:0 0 0 3px;border:0;height:28px;width:42px;}
+
+/* Styly vseobecne*/
+.invisible {visibility:hidden}
+a#logo {display:block;height:180px;width:150px;position:absolute;top:5px;left:50px;cursor:pointer;_cursor:hand;}
+a#logo:hover {background:transparent;}
+.button {color:white;font-size:0.8em;font-weight:bold;border:#EAA9A2 outset 3px;background:#C83B2D;
+        margin:0;cursor:pointer;_cursor:hand;}
+.right {text-align:right}
+a.invisible_link {position:absolute;top:-10000px; left:0;height:1px;width:1px;overflow:hidden}
+hr.cleaner {margin-bottom:-1px; visibility:hidden;clear:both;}
+
+
