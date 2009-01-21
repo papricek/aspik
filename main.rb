@@ -7,13 +7,12 @@ Dir["app/*.rb"].each do |lib|
 end
 
 get '/' do
-  "#{Sinatra.env}"
+  erb :index
 end
 
 configure do
-
   Aspik::System.connect_to_database
-  puts "Sinatra.application.options.env"
+  #set_options :views => "views"
 end
 
 configure :production do

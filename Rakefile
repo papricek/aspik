@@ -4,8 +4,8 @@ require 'sinatra'
 require File.join(File.dirname(__FILE__), 'app', 'configuration')
 
 
-task :migrate_database do
-  puts "Creating/Connecting and migrating database in #{Aspik::Configuration::DB['production']['database']}"
+task :migrate_database do |environment|
+  puts "Creating/Connecting and migrating database in #{Aspik::Configuration::DB['database']}"
   Aspik::System.connect_to_database
   if ActiveRecord::Migrator.current_version < 1
     begin
