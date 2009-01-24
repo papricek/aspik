@@ -17,7 +17,7 @@ input {color:#6F705E;vertical-align:middle;border:1px white solid;margin:0;}
 /* Main sections */
 #all {text-align:left;line-height:1;background:url(../images//logo.gif) no-repeat 0px 0px;margin:auto;width:780px;position:relative;;padding-top:180px;}
 #navigation {position:absolute; top:240px;right:40px;z-index:1;}
-#content {line-height:1.5;background:url(../images//obsah-stred.gif) repeat-y;padding-left:10px;}
+#content {line-height:1.5;background:url(../images//obsah-stred.gif) repeat-y;padding-left:10px;padding-bottom:20px;}
 #search {position:absolute;top:180px;left:610px;width:130px;}
 #footer {color:black;width:760px;height:32px;padding-top:30px;background:url(../images//obsah-spodni.gif) no-repeat;}
 

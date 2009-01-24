@@ -1,0 +1,20 @@
+body {background:#e2e2e2 url(../../images/admin/background.gif) repeat-x; font-family: Tahoma, 'Lucida Grande CE', lucida, sans-serif;}
+a {color:#66b0e6}
+
+#topbar {color:white;font-weight:bold;background:#636363;}
+#topbar a {color:white;font-size:0.8em}
+#user-information {background:url(../../images/admin/lock.gif) no-repeat center left; padding-left:30px;}
+#content {padding:0 20px}
+#main {border:2px solid white;background:#f3fcff url(../../images/admin/background-main.gif) repeat-x}
+#footer {text-align:center}
+
+h1 {color:#007bd6;font-size:1.8em;text-align:center;text-transform:uppercase;background:url(../../images/admin/line-heading.png) repeat-x bottom left;
+        position:relative;padding-bottom:0.5em;margin-top:0.5em}
+
+h2 {color:#007bd6;font-size:1.4em;text-transform:uppercase}
+thead th {color:#737373;text-transform:uppercase;background:#f0f0f0;}
+
+table {border-collapse:collapse}
+tbody td, thead th {border:1px solid #737373}
+
+h1 img {position:absolute;top:-15px;left:0}

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs" />
+    <meta name="description" content="<%= @page_title %> – <%= Aspik::CONFIG['site']['description'] %>" />
+    <meta name="keywords" content="<%= Aspik::CONFIG['site']['keywords'] %>" />
+    <meta name="author" content="<%= Aspik::CONFIG['site']['author'] %>" />
+    <meta name="copyright" content="<%= Aspik::CONFIG['site']['author'] %>" />
+    <title><%= @page_title %></title>
+    <link href="stylesheets/blueprint/screen.css" rel="stylesheet" type="text/css" media="screen, projection">
+    <link href="stylesheets/blueprint/print.css" rel="stylesheet" type="text/css" media="print">
+    <!--[if IE]><link rel="stylesheet" href="stylesheets/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link href="/stylesheets/admin/screen.css" rel="stylesheet" type="text/css" media="screen, projection"/>
+    <link href="/stylesheets/admin/print.css" rel="stylesheet" type="text/css" media="print"/>
+  </head>
+
+
+  <body>
+    <div id="topbar">
+      <div class="container">
+        <div id="user-information" class="span-24 large">
+          Přihlášen: Admin, <%= link_to "Odhlásit &raquo;", "" %>
+        </div>
+      </div>
+    </div>
+
+    <div id="main" class="container">
+      <div id="content" class="span-18 border">
+        <%= yield %>
+      </div>
+      <div id="sidebar" class="span-5 last">
+        Right sidebar
+      </div>
+
+
+      <div id="footer" class="span-24">
+        <p>
+          <%= link_to "Hlavní stránka", "" %>, <%= link_to "Mapa webu", "" %>, <%= link_to "Přístupnost", "" %>,  Copyright &copy; <%= link_to "Patrik Jíra", "http://patrikjira.com" %>, Autor <%= link_to "Webdesign Nápaditě", "http://www.napadite.net" %>
+        </p>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>

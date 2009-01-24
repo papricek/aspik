@@ -4,10 +4,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs" />
-    <meta name="description" content="Sémantický web" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="Patrik Jíra" />
-    <meta name="copyright" content="Patrik Jíra" />
+    <meta name="description" content="<%= @page_title %> – <%= Aspik::CONFIG['site']['description'] %>" />
+    <meta name="keywords" content="<%= Aspik::CONFIG['site']['keywords'] %>" />
+    <meta name="author" content="<%= Aspik::CONFIG['site']['author'] %>" />
+    <meta name="copyright" content="<%= Aspik::CONFIG['site']['author'] %>" />
     <title><%= @page_title %></title>
     <link href="/stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen"/>
     <link href="/stylesheets/print.css" rel="stylesheet" type="text/css" media="print"/>
@@ -17,16 +17,14 @@
   <body>
 
     <div id="all">
-
       <div id="content">
         <%= yield %>
-
       </div>
 
       <h2 class="navigation">navigace</h2>
       <ul id="navigation">
-        <li><a href="">žádné odkazy</a></li>
-        <li><a href="">zatím nemáme&hellip;</a></li>
+        <li><%= link_to "žádné odkazy", "http://www.seznam.cz" %></li>
+        <li><%= link_to "zatím nemáme&hellip;", "fdsafsdafsd" %></li>
       </ul>
 
       <div class="box" id="inquiry">
@@ -59,4 +57,5 @@
     </div>
 
 
-</body></html>
+  </body>
+</html>

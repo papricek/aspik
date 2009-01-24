@@ -1,8 +1,9 @@
 site:
-  title: "Sémantický web"
-  name:  "Sémantický web"
+  title: "SémantickýWeb.cz"
+  description: "SémantickýWeb.cz – blog Patrika Jíry na téma Sémantického webu a Ruby a RoR."
   author: "Patrik Jíra"
   email:  "patrikjira@gmail.com"
+  keywords: "SémantickýWeb.cz, sémantický web, semantic web, sémantika, rdf, owl"
 
 ga_code: ""
 
